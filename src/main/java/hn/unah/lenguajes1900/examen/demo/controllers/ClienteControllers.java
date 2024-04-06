@@ -10,6 +10,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -28,7 +29,7 @@ public class ClienteControllers {
     }
 
     @GetMapping("/buscar/cliente")
-    public Optional<Cliente> obtenerPorId(@RequestParam String dni) {
+    public Optional<Cliente> obtenerPorId(@PathVariable String dni) {
         return this.clienteServiceImpl.buscarClientePorId(dni);
     }
 

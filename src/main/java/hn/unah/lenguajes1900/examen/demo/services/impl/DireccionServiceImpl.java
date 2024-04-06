@@ -16,8 +16,7 @@ public class DireccionServiceImpl implements DireccionService{
 
     @Override
     public Direccion crearDireccion(Direccion direccion) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'crearDireccion'");
+        return this.direccionRepository.save(direccion);
     }
     
 
